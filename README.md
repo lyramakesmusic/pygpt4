@@ -22,7 +22,7 @@ from gpt4 import gpt4
 model = gpt4("your_openai_api_token")
 ```
 
-    To securely manage your OpenAI API token, use the `python-dotenv` library (install with `pip install python-dotenv`). Create a `.env` file in your project's root directory with your token: `OPENAI_API_KEY=your_openai_api_token`
+To securely manage your OpenAI API token, use the `python-dotenv` library (install with `pip install python-dotenv`). Create a `.env` file in your project's root directory with your token: `OPENAI_API_KEY=your_openai_api_token`
 
    ```python
    from gpt4 import gpt4
