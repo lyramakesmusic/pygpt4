@@ -22,21 +22,7 @@ from gpt4 import gpt4
 model = gpt4("your_openai_api_token")
 ```
 
-Keep your OpenAI API token secure and avoid accidentally committing it to version control. You can use the `python-dotenv` library to load the token from an environment file:
-
-1. Install the `python-dotenv` library:
-
-   ```bash
-   pip install python-dotenv
-   ```
-
-2. Create a `.env` file in your project's root directory and add your OpenAI API token:
-
-   ```
-   OPENAI_API_KEY=your_openai_api_token
-   ```
-
-3. In your Python script, load the token using `python-dotenv` and create an instance of the `gpt4` class:
+    To securely manage your OpenAI API token, use the `python-dotenv` library (install with `pip install python-dotenv`). Create a `.env` file in your project's root directory with your token: `OPENAI_API_KEY=your_openai_api_token`
 
    ```python
    from gpt4 import gpt4
@@ -48,7 +34,6 @@ Keep your OpenAI API token secure and avoid accidentally committing it to versio
 
    model = gpt4(api_key)
    ```
-
 
 ### Single API Call
 
