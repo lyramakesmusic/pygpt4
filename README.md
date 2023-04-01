@@ -21,7 +21,7 @@ from gpt4 import gpt4
 
 model = gpt4(api_key)
    
-# You can also specify a system prompt:
+# You can also specify a system prompt (this is the default):
 model = gpt4(api_key, sys="You are a clever, creative AI assistant.")
 ```
 
