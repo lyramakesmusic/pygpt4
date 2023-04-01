@@ -5,7 +5,7 @@ class gpt4:
         self.hist = [{"role": "system", "content": sys_msg}]
         openai.api_key = token
 
-    def call(self, prompt, temp=0.5):
+    def call(self, prompt, temp=0.1):
         self.hist.append({"role": "user", "content": prompt})
 
         response = openai.ChatCompletion.create(
@@ -18,7 +18,7 @@ class gpt4:
 
         return text_output
 
-    async def stream(self, prompt, temp=0.5):
+    async def stream(self, prompt, temp=0.1):
         self.hist.append({"role": "user", "content": prompt})
 
         response = openai.ChatCompletion.create(
