@@ -19,7 +19,10 @@ Import the `gpt4` class and create an instance with your OpenAI API token:
 ```python
 from gpt4 import gpt4
 
-model = gpt4("your_openai_api_token")
+model = gpt4(api_key)
+   
+# You can also specify a system prompt:
+model = gpt4(api_key, sys="You are a clever, creative AI assistant.")
 ```
 
 To securely manage your OpenAI API token, use the `dotenv` library (install with `pip install python-dotenv`). Create a `.env` file in your project's root directory with your token: 
@@ -35,9 +38,6 @@ To securely manage your OpenAI API token, use the `dotenv` library (install with
    api_key = os.getenv("OPENAI_API_KEY")
 
    model = gpt4(api_key)
-   
-   # You can also specify a system prompt:
-   model = gpt4(api_key, sys="You are a clever, creative AI assistant.")
    ```
 
 ### Single API Call
