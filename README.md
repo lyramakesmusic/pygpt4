@@ -47,7 +47,8 @@ Send a prompt to the GPT-4 API and receive the response:
 ```python
 response = model.call("prompt")
 
-response = model.call("follow-up", temp=0.8) # temp is 0.5 by default
+# temp is 0.1 by default
+response = model.call("follow-up", temp=1.0)
 ```
 
 ### Streaming API Call
