@@ -14,14 +14,14 @@ pip install -e .
 
 ## Usage
 
-Import the `gpt4` class and create an instance with your OpenAI API token:
+Import `gpt4` and create an instance with your OpenAI API token:
 
 ```python
 from gpt4 import gpt4
 
 model = gpt4(api_key)
    
-# You can also specify a system prompt (this is the default):
+# You can optionally specify a system prompt:
 model = gpt4(api_key, sys="You are a clever, creative AI assistant.")
 ```
 
@@ -71,4 +71,16 @@ Reset the chat history of the instance to its initial state:
 
 ```python
 model.clear()
+```
+
+### Multiple Users
+
+Instead of adding complexity by making this wrapper handle multiple users, you can simply create a new instance for each separate user:
+
+```python
+user1 = gpt4(api_key, sys="You are a kind, helpful chatbot.")
+user2 = gpt4(api_key, sys="You are a sarcastic, angry chatbot.")
+
+user1.call("user 1's session")
+user2.call("user 2's session")
 ```
