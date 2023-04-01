@@ -39,3 +39,5 @@ class gpt4:
 
     def clear(self):
         self.hist = [{"role": "system", "content": self.hist[0]["content"]}]
+
+        
