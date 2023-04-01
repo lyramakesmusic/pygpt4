@@ -39,16 +39,3 @@ class gpt4:
 
     def clear(self):
         self.hist = [{"role": "system", "content": self.hist[0]["content"]}]
-
-# init multiple users with optional custom system prompts
-# user1 = gpt4(token)
-# user2 = gpt4(token, "optional system prompt")
-
-# call the api, get response
-# response1 = user1.call("prompt", temp=0.4)
-# response2 = user1.call("followup")
-# user1.clear()
-
-# you can also stream responses
-# async for chunk in user2.stream(prompt, temp=0.4):
-#   print(f"{user2}: {chunk}")
