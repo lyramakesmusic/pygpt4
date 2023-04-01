@@ -35,6 +35,9 @@ To securely manage your OpenAI API token, use the `dotenv` library (install with
    api_key = os.getenv("OPENAI_API_KEY")
 
    model = gpt4(api_key)
+   
+   # You can also specify a system prompt:
+   model = gpt4(api_key, sys="You are a clever, creative AI assistant.")
    ```
 
 ### Single API Call
@@ -42,7 +45,9 @@ To securely manage your OpenAI API token, use the `dotenv` library (install with
 Send a prompt to the GPT-4 API and receive the response:
 
 ```python
-response = model.call("prompt", temp=0.4)
+response = model.call("prompt")
+
+response = model.call("follow-up", temp=0.8) # temp is 0.5 by default
 ```
 
 ### Streaming API Call
