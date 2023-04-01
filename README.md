@@ -75,7 +75,7 @@ model.clear()
 
 ### Multiple Users
 
-Instead of adding complexity by making this wrapper handle multiple users, you can simply create a new instance for each separate user:
+Instead of adding complexity by making this wrapper handle multiple users, you can simply create a separate instance for each user:
 
 ```python
 user1 = gpt4(api_key, sys="You are a kind, helpful chatbot.")
