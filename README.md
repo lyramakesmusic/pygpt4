@@ -56,6 +56,7 @@ response = model.call("follow-up", temp=1.0)
 Send a prompt to the GPT-4 API and stream the response chunks:
 
 ```python
+# model.stream() is a generator function
 for chunk in model.stream(prompt, temp=0.4):
     print(chunk)
 ```
