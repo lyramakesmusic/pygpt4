@@ -18,7 +18,7 @@ class gpt4:
 
         return text_output
 
-    async def stream(self, prompt, temp=0.1):
+    def stream(self, prompt, temp=0.1):
         self.hist.append({"role": "user", "content": prompt})
 
         response = openai.ChatCompletion.create(
@@ -28,7 +28,7 @@ class gpt4:
             stream=True,
         )
         acc_text = ''
-        async for chunk in response:
+        for chunk in response:
             if 'role' in chunk['choices'][0]['delta']:
                 continue
             chunk = chunk['choices'][0]['delta']['content']
