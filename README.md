@@ -56,13 +56,8 @@ response = model.call("follow-up", temp=1.0)
 Send a prompt to the GPT-4 API and stream the response chunks:
 
 ```python
-import asyncio
-
-async def handle_streaming(model, prompt):
-    async for chunk in model.stream(prompt, temp=0.4):
-        print(chunk)
-
-asyncio.run(handle_streaming(model, "prompt"))
+for chunk in model.stream(prompt, temp=0.4):
+    print(chunk)
 ```
 
 ### Clear Chat History
