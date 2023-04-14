@@ -80,3 +80,11 @@ user2 = gpt4(api_key, sys="You are a sarcastic, angry chatbot.")
 user1.call("user 1's session")
 user2.call("user 2's session")
 ```
+
+### Other models
+
+If gpt4 is overkill for your task (too expensive), you can pass "model" to the chat call:
+
+```python
+response = model.call("prompt", model="gpt-3.5-turbo")
+```
