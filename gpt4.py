@@ -1,8 +1,8 @@
 import openai
 
 class gpt4:
-    def __init__(self, token, sys_msg="You are a clever, creative AI assistant."):
-        self.hist = [{"role": "system", "content": sys_msg}]
+    def __init__(self, token, sys="You are a clever, creative AI assistant."):
+        self.hist = [{"role": "system", "content": sys}]
         openai.api_key = token
 
     def call(self, prompt, temp=0.1, model="gpt-4"):
